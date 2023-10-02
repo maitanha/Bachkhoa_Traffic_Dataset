@@ -33,11 +33,12 @@ train_dataset = TrafficDataset(annotations_file=customDataset.csv_name, img_dir=
 train_loader = DataLoader(dataset = train_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
 # Uncommnet for testing dataloader
-batch = next(iter(train_loader))
-images, labels = batch
-grid = torchvision.utils.make_grid(images, nrow=3)
-plt.figure(figsize=(11, 11))
-plt.imshow(np.transpose(grid, (1, 2 , 0)))
-plt.show()
-print('labels: ', labels)
+# batch = next(iter(train_loader))
+# images, labels = batch
+# print(images.shape)
+# grid = torchvision.utils.make_grid(images, nrow=3)
+# plt.figure(figsize=(11, 11))
+# plt.imshow(np.transpose(grid, (1, 2 , 0)))
+# plt.show()
+# print('labels: ', labels)
 
