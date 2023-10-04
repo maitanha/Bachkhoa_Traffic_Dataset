@@ -60,7 +60,7 @@ class TrafficDataset(Dataset):
         if self.target_transform:
             label = self.target_transform(label)
             
-        image = torch.flatten(image, start_dim=1)
+        # image = torch.flatten(image, start_dim=1)
         return (image, label)
     
 
