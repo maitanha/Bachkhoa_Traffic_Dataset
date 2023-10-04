@@ -18,8 +18,7 @@ def generate_csv_file(folder_path, csv_file_name):
         for file_name in file_names:
             temp = file_name.split('_')
             writer.writerow([file_name] + [str(ord(temp[len(temp) - 3]) - ord('A'))])
-            
-generate_csv_file(training_dataset_path, csv_name)
+
 
 class Information(Enum):
     CONDITION = 1
@@ -63,4 +62,8 @@ class TrafficDataset(Dataset):
             
         image = torch.flatten(image, start_dim=1)
         return (image, label)
+    
+
+if __name__ == "__main__":
+    generate_csv_file(training_dataset_path, csv_name)
     
