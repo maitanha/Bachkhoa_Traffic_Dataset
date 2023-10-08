@@ -1,7 +1,8 @@
-from time import gmtime, strftime
+import os
 import argparse
 import numpy as np
 import matplotlib.pyplot as plt
+from time import gmtime, strftime
 
 def plot_prediction_and_expectation(
     expectations,
@@ -23,6 +24,7 @@ def plot_prediction_and_expectation(
     plt.legend()
     if save:
         result_time = strftime("%Y-%m-%d_%H:%M:%S", gmtime())
+        check_and_create_dir("./performance/predictions")
         plt.savefig(f"./performance/predictions/prediction_{result_time}.png")
     plt.show()
     
@@ -72,6 +74,7 @@ def calculate_and_plot_grouped_differences(expectations, predictions, save=True)
     plt.legend()
     if save:
         result_time = strftime("%Y-%m-%d_%H:%M:%S", gmtime())
+        check_and_create_dir("./performance/errors")
         plt.savefig(f"./performance/errors/error_{result_time}.png")
 
     plt.show()
@@ -136,3 +139,7 @@ def get_validation_args(
     )
     
     return arg_parser.parse_args()
+
+def check_and_create_dir(dir_path):
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
