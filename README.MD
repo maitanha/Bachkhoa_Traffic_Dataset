@@ -32,7 +32,7 @@ Working Directory/
 Now, you are ready to go. I have implemented a simple interface for ease of use. You only need to pass in the parameters... or maybe not at all :D 
 
 **Model training**
-Run <code>make train</code> to start training the model
+Run <code>make train</code> to start training the model.
 This command will require you to pass in:
 <ul>
     <li>Number of epochs. Ex: <b>20</b></li>
@@ -41,7 +41,7 @@ This command will require you to pass in:
 </ul>
 
 **Model Validation**
-Run <code>make validate</code> to start validate / test your model
+Run <code>make validate</code> to start validate / test your model.
 This command will require you to pass in:
 <ul>
     <li>The trained model name (that you train above). Ex: <b>test_model.pth</b></li>
