@@ -11,7 +11,7 @@ Or else, check out how to use <code>venv</code>:
 All things considered, you can install the necessary packages within this environment or add image to <b>data</b> folder.
 
 How the <code>data</code> folder is structured:
-
+```
 Working Directory/
 ├── data/
 │   ├── full/
@@ -26,7 +26,7 @@ Working Directory/
 │   └── ...
 ├── ...
 └── README.MD
-
+```
 **Important note:** The used folder must contain two subfolders, whose names **must** be **train** and **val**.
 
 Now, you are ready to go. I have implemented a simple interface for ease of use. You only need to pass in the parameters... or maybe not at all :D 
